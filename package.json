@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.20.0",
+    "commander": "^2.9.0",
     "request": "^2.69.0",
     "sendmail": "^0.2.1"
   }
