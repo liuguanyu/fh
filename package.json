@@ -1,0 +1,16 @@
+{
+  "name": "find-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liuguanyu",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "request": "^2.69.0",
+    "sendmail": "^0.2.1"
+  }
+}
