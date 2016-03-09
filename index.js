@@ -1,4 +1,5 @@
 var dispatcher = require("./dispatcher.js");
+var urls = require("./urls.js"); 
 var sendmail = require("sendmail")();
 var cli = require("commander");
 
@@ -7,14 +8,6 @@ cli.allowUnknownOption()
    .option("-p, --price [value]", "max price")
    .option("-m, --mail [value]", "mailto")
    .parse( process.argv );
-
-var urls = [
-    "http://bj.lianjia.com/ershoufang/shilibao/l2a4/",
-    "http://bj.lianjia.com/ershoufang/shilibao/pg2l2a4/",
-    "http://bj.5i5j.com/exchange/shilibao/r2",
-    "http://bj.5i5j.com/exchange/shilibao/r2n2",
-    "http://bj.5i5j.com/exchange/shilibao/r2n3"
-];
 
 var maxPrice = typeof cli.price !== undefined && parseInt(cli.price, 10) ? parseIn(cli.price, 10) :"480";
 var mailto = typeof cli.mail == undefined ? undefined : cli.mail;
