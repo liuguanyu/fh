@@ -3003,6 +3003,7 @@ findhouse.prj=/Users/liuguanyu/devspace/find-house {
  }
  vendor=vendor {
   base.js
+  viwjw.js
   v5i5j.js
   vlianjia.js
  }

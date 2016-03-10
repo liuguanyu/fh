@@ -10,5 +10,7 @@ module.exports = [
     "http://bj.5i5j.com/exchange/shilibao/r2n7",
     "http://bj.5i5j.com/exchange/shilibao/r2n8",
     "http://bj.5i5j.com/exchange/shilibao/r2n9",
-    "http://bj.5i5j.com/exchange/shilibao/r2n10"
+    "http://bj.5i5j.com/exchange/shilibao/r2n10",
+    "http://www.iwjw.com/sale/beijing/g2id13633rn2",
+    "http://www.iwjw.com/sale/beijing/g2id13633rn2p2",
 ];
