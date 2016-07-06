@@ -9,7 +9,7 @@ cli.allowUnknownOption()
    .option("-m, --mail [value]", "mailto")
    .parse( process.argv );
 
-var maxPrice = typeof cli.price !== undefined && parseInt(cli.price, 10) ? parseInt(cli.price, 10) :"480";
+var maxPrice = typeof cli.price !== undefined && parseInt(cli.price, 10) ? parseInt(cli.price, 10) :"600";
 var mailto = typeof cli.mail == undefined ? undefined : cli.mail;
 
 var pros = urls.map(function (el){
