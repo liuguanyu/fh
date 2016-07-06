@@ -1,15 +1,24 @@
 var base = require("./base.js");
 
 var callback = function ($){
-    var list = $(".house-lst li").map(function (){
-        var priceAll = $(this).find(".col-3 .price").text(); 
-        var pricePre = $(this).find(".col-3 .price-pre").text();
-        var dist = $(this).find(".laisuzhou").text();
-        var style = $(this).find(".where>span").eq(0).text().replace(/&nbsp;/g, '');
-        var area = $(this).find(".where>span").eq(1).text().replace(/&nbsp;/g, '').replace('平', '');
-        var dir = $(this).find(".where>span").eq(2).text();
-        var visit = $(this).find(".square .num").text();
-        var url = $(this).find(".info-panel h2 a").attr("href");
+    var list = $(".listContent li").map(function (){
+        var priceAll = $(this).find(".priceInfo .totalPrice span").text(); 
+        var pricePre = $(this).find(".priceInfo .unitPrice>span").text().replace("单价", "").replace('平米', 'm²');
+
+        var houseInfo = $(this).find(".info .address .houseInfo").text().split("|").map(function (el){
+            return el.trim();
+        });
+
+        var dist = houseInfo[0];
+        var style = houseInfo[1];
+        var area = houseInfo[2].replace(/平米/, '').replace('平', '');
+        var dir = houseInfo[3];
+
+        var followInfo = $(this).find(".info .followInfo").text().split("/").map(function (el){
+            return el.trim();
+        });
+        var visit = followInfo[1].replace(/[^0-9]/g, "");
+        var url = $(this).find(">a").attr("href");
 
         return {
             priceAll : priceAll,
